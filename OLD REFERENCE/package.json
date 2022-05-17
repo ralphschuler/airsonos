@@ -1,0 +1,38 @@
+{
+  "name": "airsonos",
+  "version": "0.2.6",
+  "author": "Stephen Wan <stephen@stephenwan.net>",
+  "description": "AirTunes to Sonos devices",
+  "contributors": [
+    {
+      "name": "Stephen Wan",
+      "email": "stephen@stephenwan.net"
+    }
+  ],
+  "scripts": {
+    "start": "npx babel-node ./lib/index.js",
+    "test": "npx jscs .",
+    "prepublish": "npx babel ./lib/ -d ./bin/"
+  },
+  "bin": "./bin/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stephen/airsonos.git"
+  },
+  "dependencies": {
+    "flags": "^0.1.2",
+    "ip": "^1.1.0",
+    "nicercast": "^0.1.0",
+    "sonos": "^1.14.1"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.17.10",
+    "@babel/core": "^7.17.12",
+    "@babel/node": "^7.17.10",
+    "jscs": "^2.1.0"
+  },
+  "resolutions": {
+    "mdns": "git+https://github.com/agnat/node_mdns.git"
+  }
+}
